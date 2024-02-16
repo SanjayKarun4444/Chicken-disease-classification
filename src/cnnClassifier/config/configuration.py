@@ -3,12 +3,12 @@ from cnnClassifier.utils.common import read_yaml, create_directories
 from cnnClassifier.entity.config_entity import DataIngestionConfig
 
 class ConfigurationManager:
-    ABSOLUTE_CONFIG_FILE_PATH = Path("Users\sanja\OneDrive\Documents\GitHub\Chicken-disease-classification\config\config.yaml")
-    ABSOLUTE_PARAMS_FILE_PATH = Path("Users\sanja\OneDrive\Documents\GitHub\Chicken-disease-classification\params.yaml")
+    ABSOLUTE_CONFIG_FILE_PATH = Path("config/config.yaml")
+    ABSOLUTE_PARAMS_FILE_PATH = Path("params.yaml")
     def __init__(
         self,
-        config_filepath = CONFIG_FILE_PATH,
-        params_filepath = PARAMS_FILE_PATH):
+        config_filepath = ABSOLUTE_CONFIG_FILE_PATH,
+        params_filepath = ABSOLUTE_PARAMS_FILE_PATH):
 
         self.config = read_yaml(config_filepath)
         self.params = read_yaml(params_filepath)

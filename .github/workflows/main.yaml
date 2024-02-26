@@ -19,8 +19,6 @@ jobs:
     steps:
       - name: Checkout Code
         uses: actions/checkout@v3
-        with:
-          node-version: '20'
 
       - name: Lint code
         run: echo "Linting repository"

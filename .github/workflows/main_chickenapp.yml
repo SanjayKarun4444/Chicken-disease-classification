@@ -30,8 +30,13 @@ jobs:
       uses: docker/build-push-action@v3
       with:
         push: true
-        tags: chickenappsanjay.azurecr.io/${{ secrets.AzureAppService_ContainerUsername_94025f5aed8b4af1922da4db3047fe61 }}/chicken:${{ github.sha }}
+        tags: chickenappsanjay.azurecr.io/chicken:a50a30fbc53faea7ce592060d9a6ad55f86a4283
         file: ./Dockerfile
+        load: false
+        no-cache: false
+        pull: false
+        github-token: ${{ secrets.GITHUB_TOKEN }}
+      
 
   deploy:
     runs-on: ubuntu-latest

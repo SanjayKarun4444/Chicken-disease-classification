@@ -24,7 +24,7 @@ jobs:
       with:
         registry: https://chickenappsanjay.azurecr.io/
         username: chickenappsanjay
-        password: 
+        password: KYovQMjiQfkKLHS9Pic286vT1kyIfycbW2ijF2dE3T+ACRBxVM3J
 
     - name: Build and push container image to registry
       uses: docker/build-push-action@v3

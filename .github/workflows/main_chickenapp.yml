@@ -24,7 +24,7 @@ jobs:
       with:
         registry: https://chickenappsanjay.azurecr.io/
         username: chickenappsanjay
-        password: s3cEZKH5yytiVnJ3h+eI3qhhzf9q1vNwEi6+q+WGdd+ACRCZ7JD6
+        password: 
 
     - name: Build and push container image to registry
       uses: docker/build-push-action@v3
@@ -48,4 +48,4 @@ jobs:
         app-name: 'chickenappsanjay'
         slot-name: 'production'
         publish-profile: ${{ secrets.AzureAppService_PublishProfile_bc7f25129a214516999e2f1cb58abd30 }}
-        images: 'chickenappsanjay.azurecr.io/${{ secrets.AzureAppService_ContainerUsername_94025f5aed8b4af1922da4db3047fe61 }}/chicken:${{ github.sha }}'
+        images: 'chickenappsanjay.azurecr.io/chickenappsanjay/chicken:${{ github.sha }}'
